@@ -1,0 +1,201 @@
+:root {
+    /* https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/custom-properties */
+    /* define CSS custom properties here */
+    --left-top-height: 80px;
+    --brand-font-size: 100px;
+    --brand-color: white;
+    --left-div-width: 600px;
+    --left-bot-font-size: 12px;
+    --logo-width: 80px;
+    /* https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element */
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    --logo-filter: invert(100%) sepia(0%) saturate(7472%) hue-rotate(276deg) brightness(108%) contrast(108%);
+    --right-background-color: rgba(0,0,0,0.05);
+    --right-font-color-main: rgba(0,0,0,0.9);
+    --right-font-color-secondary: rgba(0,0,0,0.6);
+    --right-padding-double: 100px;
+    --right-padding-normal: 50px;
+    --right-padding-light: 25px;
+}
+
+/* https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/more-text-styles */
+/* using downloaded font */
+@font-face {
+    font-family: brand-font;
+    src: url('./assets/Raccosetta_demo.ttf');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.left {
+    flex-shrink: 0;
+    width: var(--left-div-width);
+    background-image: url('./assets/alec-favale-RDIa_qFpWHc-unsplash.jpg');
+    background-size: cover;
+    background-position: center; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left .top {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: var(--left-top-height);
+}
+
+.left .top .logo img {
+    width: var(--logo-width);
+    filter: var(--logo-filter);
+}
+
+.left .top .brand {
+    font-family: brand-font, sans-serif;
+    font-size: var(--brand-font-size);
+    color: var(--brand-color);
+    text-align: center;
+}
+
+.left .bot {
+    color: grey;
+    padding-bottom: 10px;
+    font-size: var(--left-bot-font-size);
+}
+
+.left .bot a {
+    color: white;
+}
+
+.right {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.right .top {
+    height: 150px;
+    background-color: var(--right-background-color);
+    color: var(--right-font-color-main);
+    padding: var(--right-padding-double) var(--right-padding-double) 
+             var(--right-padding-normal) var(--right-padding-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right form {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.right .mid .form-greeting {
+    color: var(--right-font-color-main);
+    font-weight: bold;
+}
+
+.right .mid .row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.right .top {
+    font-weight: bold;
+}
+
+.right .mid {
+    flex: 0;
+    background-color: white;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,0.2);
+    padding: var(--right-padding-light) var(--right-padding-double) 
+             var(--right-padding-normal) var(--right-padding-normal);
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--right-font-color-secondary);
+    letter-spacing: 0.5px;
+}
+
+.input-field input {
+    width: 300px;
+    padding: 5px; 
+    border-color:rgba(0,0,0,0.3);
+    border-width: 0.5px;
+    border-radius: 2px;
+}
+
+.input-field input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+    border-color: rgba(0,0,255);
+}
+
+.right .bot {
+    flex: 1;
+    background-color: var(--right-background-color);
+    padding: var(--right-padding-normal) var(--right-padding-double) 
+             var(--right-padding-double) var(--right-padding-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right .bot button[type="submit"] {
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    background-color: black;
+    padding: 12px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.right .bot .login-message {
+    font-size: 12px;
+    color: var(--right-font-color-secondary);
+}
+
+.right .bot .login-message a {
+    text-decoration: none;
+    color: var(--right-font-color-main);
+    font-weight: bold;
+}
+
+/* form validation */
+span.error {
+    height: 20px;
+    font-size: 10px;
+    color: red;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+input.invalid + span.error {
+    display: block;
+}

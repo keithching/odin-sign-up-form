@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="left">
+        <div class="top">
+            <div class="logo">
+                <img src="./assets/37846f46a72a8ab93c30726919783ab6.svg" alt="coffee-shaped brand logo">
+            </div>
+            <div class="brand">THE HOSTEL</div>
+        </div>
+        <div class="bot">
+            <div>Photo by <a href="https://unsplash.com/@alecfavale">Alec Favale</a> from <a href="https://unsplash.com/photos/RDIa_qFpWHc">Unsplash</a></div>
+            <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="top">
+            <div>
+                This is not a real online service! You know you need something
+                like this in your life to help you realize your deepest dreams.
+                Sign up now to get started.
+            </div>
+            <div>You know you want to.</div>
+        </div>
+        <form action="" method="post" id="signUpForm" novalidate>  
+            <div class="mid">
+                <div class="form-greeting">Let's do this!</div>
+                <div class="row">
+                    <div class="input-field">
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" name="firstName" id="firstName" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-field">
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" name="lastName" id="lastName" required>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" required>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-field">
+                        <label for="phoneNumber">PHONE NUMBER</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" required>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" required minlength="8"> 
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-field">
+                        <label for="confirmPassword">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" required minlength="8"> 
+                        <span class="error"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="bot">
+                <button type="submit">Create Account</button>
+                <div class="login-message">
+                    <span>Already have an account? </span><a href="">Log in</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
