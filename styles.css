@@ -183,6 +183,7 @@ body {
     text-decoration: none;
     color: var(--right-font-color-main);
     font-weight: bold;
+    pointer-events: none;
 }
 
 /* form validation */
